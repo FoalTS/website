@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FoalTS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="assets/3p/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">
+        <img src="assets/img/logo2_64.png" alt=""
+         width="30" height="30" class="d-inline-block align-top">
+        FoalTS
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="https://foalts.gitbooks.io/docs/" class="nav-link">Documentation</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="https://twitter.com/FoalTs" class="nav-link">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/FoalTS/" class="nav-link">Github</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1>FoalTS</h1>
+            <h3>A Node.Js framework for ambitious web apps.</h3>
+            <a href="https://foalts.gitbooks.io/docs/" class="btn btn-primary mt-3">Get started</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="terminal-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="text-center">Create your first app</h3>
+            <div id="typed-strings" style="display: none;">
+              <span>
+                $ npm install -g yo generator-foal<br>$ yo foal my-app<br>$ cd my-app<br>$ npm run compile<br>$ npm run start
+              </span>
+            </div>
+            <div class="terminal m-auto">
+              <span id="typed"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="text-center">Features</h3>
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <h4 class="text-center">TypeScript</h4>
+                <p class="text-justify">
+                  Use optional static type-checking along with the latest
+                  ECMAScript features thanks to TypeScript.
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <h4 class="text-center">Scalable</h4>
+                <p class="text-justify">
+                  Foal architecture lets you start coding small apps
+                  which will be easily extended as your team and needs
+                  grow up.
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <h4 class="text-center">Testable</h4>
+                <p class="text-justify">
+                  Testing your code shouldn't be difficult. Foal
+                  components are designed to easily be tested.
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <h4 class="text-center">High-level components</h4>
+                <p class="text-justify">
+                  Complex apps need structure. Enjoy coding with foal
+                  controllers, services, modules and hooks.
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <h4 class="text-center">Progressive integration</h4>
+                <p class="text-justify">
+                  Already having an express app running on prod?
+                  No worries, you can progressively move your code
+                  from express to FoalTS.
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <h4 class="text-center">Great tools</h4>
+                <p class="text-justify">
+                  Use the foal generator to quickly start an app and then
+                  write and build its code.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mastfoot">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            Code licensed under MIT License.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/3p/jquery/jquery.min.js"></script>
+    <script src="assets/3p/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/3p/typed.js/typed.min.js"></script>
+    <script>
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 15,
+        showCursor: false
+      });
+    </script>
+  </body>
+</html>

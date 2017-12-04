@@ -1,0 +1,49 @@
+.terminal {
+  color: white;
+  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-size: 11pt;
+  background: #30353A;
+  padding: 10px;
+  border-radius: 5px;
+  height: 125px;
+  max-width: 500px;
+}
+
+.masthead, .mastfoot {
+  background-color: #4e5761;
+}
+
+.masthead {
+  h1 {
+    color: #26D3FF;
+  }
+
+  h3 {
+    color: rgb(214, 238, 243);
+  }
+}
+
+.terminal-section {
+}
+
+.feature-section {
+  background-color: rgb(226, 244, 255);
+
+  h3 {
+    // color: rgb(153, 9, 9);
+    // color: rgb(61, 42, 131);
+  }
+
+  h4 {
+    color: rgb(100, 73, 196);
+  }
+}
+
+.mastfoot {
+  color: white;
+  padding: 20px 0px;
+}
+
+.masthead, .terminal-section, .feature-section {
+  padding: 50px 0px;
+}

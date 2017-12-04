@@ -1,0 +1,29 @@
+{
+  "name": "@foal/website",
+  "version": "1.0.0",
+  "description": "FoalTS website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoalTS/website.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FoalTS/website/issues"
+  },
+  "homepage": "https://github.com/FoalTS/website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1",
+    "typed.js": "^2.0.6"
+  }
+}
