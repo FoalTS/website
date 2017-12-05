@@ -25,7 +25,7 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('assets/img'));
 });
 
-gulp.task('default', ['copy']);
+gulp.task('default', ['copy', 'sass']);
 
 gulp.task('sass', () => {
   gulp.src('scss/main.scss')
