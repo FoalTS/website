@@ -2,41 +2,10 @@
 <html lang="en">
   <head>
     <title>FoalTS - A Node.js framework for building robust web apps.</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="FoalTS is the framework you need to build the backend of small to large web applications. As a brief overview, FoalTS lets you quickly set up a connection to a DB and then create, read, update or delete its data through a REST API. All of that in TypeScript. Read the docs now to learn more about all FoalTS features!">
-    <link rel="icon" type="image/png" href="assets/img/logo2_64.png" />
-
-    <link rel="stylesheet" href="assets/3p/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <%- include('../partials/head.html') %>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a href="#" class="navbar-brand">
-        <img src="assets/img/logo2_64.png" alt=""
-         width="30" height="30" class="d-inline-block align-top">
-        FoalTS
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="https://foalts.gitbooks.io/docs/" class="nav-link">Documentation</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="https://twitter.com/FoalTs" class="nav-link">Twitter</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://github.com/FoalTS/" class="nav-link">Github</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <%- include('../partials/navbar.html', { home: true, documentation: false }) %>
 
     <header class="masthead">
       <div class="container">
@@ -44,7 +13,7 @@
           <div class="col-lg-12 text-center">
             <h1>FoalTS</h1>
             <h3>A Node.js framework for building robust web apps.</h3>
-            <a href="https://foalts.gitbooks.io/docs/" class="btn btn-primary mt-3">Get started</a>
+            <a href="documentation.html" class="btn btn-primary mt-3">Get started</a>
           </div>
         </div>
       </div>
@@ -124,18 +93,8 @@
       </div>
     </section>
 
-    <footer class="mastfoot">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            Code licensed under MIT License.
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="assets/3p/jquery/jquery.min.js"></script>
-    <script src="assets/3p/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <%- include('../partials/footer.html') %>
+    <%- include('../partials/scripts.html') %>
     <script src="assets/3p/typed.js/typed.min.js"></script>
     <script>
       var typed = new Typed('#typed', {

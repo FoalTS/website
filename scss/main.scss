@@ -41,9 +41,40 @@
 
 .mastfoot {
   color: white;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
 .masthead, .terminal-section, .feature-section {
   padding: 50px 0px;
+}
+
+.second-level-menu > li > a {
+  padding-left: 1em !important; // !improtant is a hack
+}
+
+.dochead {
+  padding: 10px;
+  background-color: #eeffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.doc-nav {
+  min-width: 250px;
+  align-items:flex-start;
+  overflow: scroll;
+}
+
+.doc-container {
+  flex: 1;
+  display: flex;
+}
+
+.doc-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.doc-content {
+  padding: 20px;
+  overflow: scroll
 }
