@@ -8,6 +8,8 @@ const through = require('through2');
 const fs = require('fs');
 const replace = require('gulp-replace');
 
+require('./tools/3p.task')(gulp);
+
 showdown.setFlavor('github');
 
 function gulpShowdown() {
@@ -30,37 +32,6 @@ function includeTo(template) {
     cb(null, file)
   })
 }
-
-
-gulp.task('3p', () => {
-  gulp.src([
-      'node_modules/bootstrap/dist/**/*',
-      '!**/*.map'
-    ])
-    .pipe(gulp.dest('dist/assets/3p/bootstrap'));
-
-  gulp.src([
-      'node_modules/jquery/dist/**/*',
-      '!**/*.map'
-    ])
-    .pipe(gulp.dest('dist/assets/3p/jquery'));
-  
-  gulp.src([
-      'node_modules/typed.js/lib/**/*',
-      '!**/*.map'
-    ])
-    .pipe(gulp.dest('dist/assets/3p/typed.js'));
-      
-  gulp.src([
-    'node_modules/prismjs/prism.js',
-    'node_modules/prismjs/components/prism-typescript.min.js',
-    'node_modules/prismjs/plugins/toolbar/prism-toolbar.css',
-    'node_modules/prismjs/plugins/toolbar/prism-toolbar.min.js',
-    'node_modules/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js',
-    'node_modules/prismjs/themes/*.css',
-  ])
-  .pipe(gulp.dest('dist/assets/3p/prismjs'));
-});
 
 gulp.task('img', () => {
   return gulp.src('img/*')
@@ -119,19 +90,14 @@ gulp.task('build-docs-markdown', ['build-doc-wrapper'], () => {
 
 gulp.task('build-docs', ['build-docs-html', 'build-docs-markdown'])
 
-gulp.task('assets', ['3p', 'img', 'sass']);
+gulp.task('build', ['3p', 'img', 'sass', 'build-home', 'build-docs']);
 
-gulp.task('build', ['assets', 'build-home', 'build-docs']);
-
-gulp.task('browserSync', () => {
+gulp.task('dev', ['build'], () => {
   browserSync.init({
     server: {
       baseDir: './dist'
     },
   });
-});
-
-gulp.task('dev', ['browserSync', 'build'], () => {
   gulp.watch('img/*', ['img']);
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch([
