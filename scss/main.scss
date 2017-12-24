@@ -41,9 +41,67 @@
 
 .mastfoot {
   color: white;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
 .masthead, .terminal-section, .feature-section {
   padding: 50px 0px;
+}
+
+.second-level-menu > li > a {
+  padding-left: 1em !important; // !improtant is a hack
+}
+
+.dochead {
+  padding: 10px;
+  background-color: #eeffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.doc-nav {
+  min-width: 220px;
+  align-items:flex-start;
+  overflow: scroll;
+}
+
+.doc-container {
+  flex: 1;
+  display: flex;
+}
+
+.doc-wrapper {
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+  height: 100%;
+}
+.doc-content {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  padding: 20px;
+  overflow: scroll
+}
+
+.doc-index {
+  .card {
+    height: 100%;
+  }
+
+  h2 {
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+  }
 }

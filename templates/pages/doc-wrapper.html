@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FoalTS - A Node.js framework for building robust web apps.</title>
+    <%- include('../partials/head.html') %>
+    <style>
+      html, body {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="doc-wrapper">
+      <%- include('../partials/navbar.html', { home: false, documentation: true }) %>
+      <section class="dochead">
+        Start, build and deploy a web app shouldn't take too long. That's why you cannot go without FoalTS.
+      </section>
+      <div class="doc-container">
+        <%- include('../partials/side-navbar.html') %>
+        <div class="doc-content">          
+          {{content}}
+        </div>
+      </div>
+      <%- include('../partials/footer.html') %>
+    </div>
+    <%- include('../partials/scripts.html') %>
+  </body>
+</html>
