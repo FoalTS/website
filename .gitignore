@@ -1,3 +1,6 @@
 assets/
 node_modules/
 .DS_Store
+templates/
+docs/
+guide-frontend.zip
