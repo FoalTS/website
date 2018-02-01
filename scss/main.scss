@@ -14,6 +14,12 @@
 }
 
 .masthead {
+  @media (min-width: 576px) and (max-width: 1450px) {
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position-y: -6em;
+  }
+
   h1 {
     color: #26D3FF;
   }
