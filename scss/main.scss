@@ -14,8 +14,14 @@
 }
 
 .masthead {
+  @media (min-width: 576px) and (max-width: 1450px) {
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position-y: -6em;
+  }
+
   h1 {
-    color: #26D3FF;
+    color: hsla(213, 81%, 80%, 1);
   }
 
   h3 {
@@ -35,7 +41,7 @@
   }
 
   h4 {
-    color: rgb(100, 73, 196);
+    // color: rgb(100, 73, 196);
   }
 }
 
