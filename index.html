@@ -4,7 +4,7 @@
     <title>FoalTS - Start fast, code less, do more.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="FoalTS is a high-level Node.JS framework to quickly build web apps in TypeScript. By providing a robust architecture with a large amount of packages and tools, FoalTS is designed to let you fastly bootstrap and develop ambitious backend projects.">
+    <meta name="description" content="FoalTS is a high-level Node.JS framework to quickly build web apps in TypeScript. By providing a robust architecture with many packages and tools, FoalTS is designed to let you fastly bootstrap and develop ambitious backend projects.">
     <link rel="icon" type="image/png" href="assets/img/logo_64.png" />
 
     <link rel="stylesheet" href="assets/3p/bootstrap/css/bootstrap.min.css">
@@ -50,18 +50,19 @@
     <header class="masthead">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <img src="assets/img/logo_250.png" alt="" height="200px" class="d-block mx-auto d-none d-sm-block d-md-none mb-4">
+          <div class="col-lg-8 d-flex flex-column justify-content-center">
             <h1>FoalTS</h1>
             <h3>Start fast, code less, do more.</h3>
             <p class="text-white mt-3">
               FoalTS is a high-level <strong>Node.JS framework</strong> to quickly build web apps in TypeScript.
-              By providing a robust architecture with a large amount of packages and tools, FoalTS is designed to let you fastly bootstrap and develop ambitious backend projects.
+              By providing a robust architecture with many packages and tools, FoalTS is designed to let you fastly bootstrap and develop ambitious backend projects.
             </p>
-            <a href="https://foalts.gitbooks.io/docs/" class="btn btn-primary mt-3">Get started</a>
+            <div>
+              <a href="https://foalts.gitbooks.io/docs/" class="btn btn-primary mt-3">Get started</a>
+            </div>
           </div>
-          <div class="col-md-4 d-none d-md-block align-self-center">
-            <img src="assets/img/logo_250.png" alt="" class="d-block mx-auto mb-3">
+          <div class="col-lg-4 d-none d-lg-block align-self-center">
+            <img src="assets/img/logo_400.png" alt="" class="d-block mx-auto mb-3">
           </div>
         </div>
       </div>
@@ -71,10 +72,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="text-center">Create your first app</h3>
+            <h3 class="text-center mt-0">Create your first app</h3>
             <div id="typed-strings" style="display: none;">
               <span>
-                $ npm install -g yo generator-foal<br>$ yo foal my-app<br>$ cd my-app<br>$ npm run dev:app
+                $ npm install -g yo generator-foal<br>$ yo foal my-app<br>$ cd my-app<br>$ npm run develop
               </span>
             </div>
             <div class="terminal m-auto">
@@ -91,59 +92,95 @@
           <div class="col-lg-12">
             <h2 class="text-center mb-5">Features</h2>
             <div class="row">
-              <div class="col-lg-4 col-md-6 d-flex">
-                <div class="alert">
-                  <h4 class="alert-heading text-center">TypeScript</h4>
-                  <p class="text-justify">
-                    FoalTS is natively written in TypeScript and is designed to be used
-                    with TypeScript. Enjoy now optional static type-checking and the latest ECMAScript
-                    features.
-                  </p>
+              <div class="col-sm-12 d-flex">
+                <div class="alert alert-primary flex-fill p-md-4 mb-4">
+                  <div class="row">
+                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
+                        <h4 class="alert-heading text-center">TypeScript</h4>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-justify mb-0">
+                        FoalTS is natively written in TypeScript and is designed to be used
+                        with TypeScript. Enjoy now optional static type-checking and the latest ECMAScript
+                        features.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 d-flex">
-                <div class="alert">
-                  <h4 class="text-center">Architecture</h4>
-                  <p class="text-justify">
-                    FoalTS provides a structure made up of hooks, services, modules and controllers
-                    to let you easily handle a growing app with its complexity.
-                  </p>
+              <div class="col-sm-12 d-flex">
+                <div class="alert alert-primary flex-fill p-md-4 mb-4">
+                  <div class="row">
+                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
+                        <h4 class="alert-heading text-center">Architecture</h4>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-justify mb-0">
+                        FoalTS provides a structure made up of hooks, services, modules and controllers
+                        to let you easily handle a growing app with its complexity.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 d-flex">
-                <div class="alert">
-                  <h4 class="text-center">Many packages</h4>
-                  <p class="text-justify">
-                    Don't reinvent the wheel! FoalTS has an incredible number of features such as setting up a REST API,
-                    creating a CRUD service, escaping bad input, controlling access and more!
-                  </p>
+              <div class="col-sm-12 d-flex">
+                <div class="alert alert-primary flex-fill p-md-4 mb-4">
+                  <div class="row">
+                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
+                        <h4 class="alert-heading text-center">Many packages</h4>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-justify mb-0">
+                        Don't reinvent the wheel! FoalTS has an incredible number of features such as setting up a REST API,
+                        creating a CRUD service, escaping bad input, controlling access and more!
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 d-flex">
-                <div class="alert">
-                  <h4 class="text-center">Great tools</h4>
-                  <p class="text-justify">
-                    FoalTS provides many tools to quickly bootstrap a project and speed up development
-                    (compiler config, linting, code generation, etc).
-                  </p>
+              <div class="col-sm-12 d-flex">
+                <div class="alert alert-primary flex-fill p-md-4 mb-4">
+                  <div class="row">
+                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
+                        <h4 class="alert-heading text-center">Great tools</h4>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-justify mb-0">
+                        FoalTS provides many tools to quickly bootstrap a project and speed up development
+                        (compiler config, linting, code generation, etc).
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 d-flex">
-                <div class="alert">
-                  <h4 class="text-center">Asynchronicity</h4>
-                  <p class="text-justify">
-                    FoalTS philosophy complety integrates modern asynchronous programming using promises
-                    and async/await functions. Say goodbye to the hell of JS callbacks!
-                  </p>
+              <div class="col-sm-12 d-flex">
+                <div class="alert alert-primary flex-fill p-md-4 mb-4">
+                  <div class="row">
+                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
+                        <h4 class="alert-heading text-center">Asynchronicity</h4>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-justify mb-0">
+                        FoalTS philosophy complety integrates modern asynchronous programming using promises
+                        and async/await functions. Say goodbye to the hell of JS callbacks!
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 d-flex">
-                <div class="alert">
-                  <h4 class="text-center">Testability</h4>
-                  <p class="text-justify">
-                    FoalTS components are designed to easily be tested (dependency injection, async
-                    functions, separation of concern).
-                  </p>
+              <div class="col-sm-12 d-flex">
+                <div class="alert alert-primary flex-fill p-md-4">
+                  <div class="row">
+                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
+                        <h4 class="alert-heading text-center">Testability</h4>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-justify mb-0">
+                        FoalTS components are designed to easily be tested (dependency injection, async
+                        functions, separation of concern).
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
