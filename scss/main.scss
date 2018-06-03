@@ -1,3 +1,10 @@
+.btn {
+  background-color: #4c90e4;
+  border-color: #4c90e4;
+  border-radius: initial;
+  padding: 0.5rem 4rem;
+}
+
 .terminal {
   color: white;
   font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
@@ -9,23 +16,38 @@
   max-width: 500px;
 }
 
-.masthead, .mastfoot {
+.masthead {
+  background: linear-gradient(to bottom right, #5696de, #d5e7fc) ;
+}
+
+.mastfoot {
   background-color: #4e5761;
 }
 
 .masthead {
   @media (min-width: 576px) and (max-width: 1450px) {
-    background-image: url('../img/background.png');
-    background-repeat: no-repeat;
-    background-position-y: -6em;
+    // background-image: url('../img/background.png');
+    // background-repeat: no-repeat;
+    // background-position-y: -6em;
   }
 
   h1 {
-    color: hsla(213, 81%, 80%, 1);
+    // color: #ffce90;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
   }
 
   h3 {
     color: rgb(214, 238, 243);
+  }
+
+  p {
+    line-height: 1.75;
+  }
+
+  img {
+    max-width: 300px;
   }
 }
 
@@ -36,12 +58,7 @@
   background-color: rgb(226, 244, 255);
 
   h3 {
-    // color: rgb(153, 9, 9);
-    // color: rgb(61, 42, 131);
-  }
-
-  h4 {
-    // color: rgb(100, 73, 196);
+    font-weight: bold;
   }
 }
 
@@ -51,5 +68,5 @@
 }
 
 .masthead, .terminal-section, .feature-section {
-  padding: 50px 0px;
+  padding: 40px 0px;
 }
