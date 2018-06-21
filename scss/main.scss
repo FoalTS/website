@@ -58,6 +58,10 @@
 .feature-section {
   background-color: #fafafa;
   // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 50px;
 
   h3 {
     font-weight: bold;
@@ -81,6 +85,6 @@
   padding: 10px 0px;
 }
 
-.masthead>.content, .feature-section, .community-section  {
+.masthead>.content, .community-section  {
   padding: 40px 0px;
 }
