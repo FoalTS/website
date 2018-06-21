@@ -55,7 +55,8 @@
 }
 
 .feature-section {
-  background-color: rgb(226, 244, 255);
+  // background-color: rgb(226, 244, 255);
+  background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
 
   h3 {
     font-weight: bold;
@@ -67,6 +68,10 @@
   padding: 20px 0px;
 }
 
-.masthead, .terminal-section, .feature-section {
+.masthead, .feature-section {
   padding: 40px 0px;
+}
+
+.terminal-section {
+  padding: 50px 0px;
 }
