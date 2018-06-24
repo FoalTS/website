@@ -3,8 +3,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const ejs = require('gulp-ejs');
 
-const content = require('./content');
-
 gulp.task('copy', () => {
   gulp.src([
       'node_modules/bootstrap/dist/**/*',
@@ -35,6 +33,8 @@ gulp.task('copy', () => {
 });
 
 gulp.task('ejs', () => {
+  delete require.cache[require.resolve('./content')];
+  const content = require('./content');
   gulp.src('*.html')
     .pipe(ejs(content))
     .pipe(gulp.dest('dist'))
@@ -65,4 +65,5 @@ gulp.task('browserSync', () => {
 gulp.task('dev', ['browserSync', 'sass', 'ejs'], () => {
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('*.html', ['ejs']);
+  gulp.watch('content.js', ['ejs']);
 });
