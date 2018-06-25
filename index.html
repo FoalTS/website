@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="assets/img/logo_64.png" />
 
     <link rel="stylesheet" href="assets/3p/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/3p/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112613053-1"></script>
@@ -20,45 +21,74 @@
     </script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <a href="#" class="navbar-brand">
-        <img src="assets/img/logo_64.png" alt=""
-         width="30" height="30" class="d-inline-block align-top">
-        <span class="ml-1">FoalTS</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="https://foalts.gitbook.io/docs/" class="nav-link">Documentation</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="https://twitter.com/FoalTs" class="nav-link">Twitter</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://github.com/FoalTS/" class="nav-link">Github</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
     <header class="masthead">
-      <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-dark">
+          <a href="#" class="navbar-brand">
+            <img src="assets/img/logo_64.png" alt=""
+             width="30" height="30" class="d-inline-block align-top">
+            <span class="ml-1">FoalTS</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item mr-2 d-flex align-items-center">
+                <a href="https://twitter.com/FoalTs?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @FoalTs</a>
+              </li>
+              <li class="nav-item d-flex align-items-center">
+                <a class="github-button" href="https://github.com/FoalTS/foal" data-icon="octicon-star" aria-label="Star FoalTS/foal on GitHub">Star</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="https://foalts.gitbook.io/docs/" class="nav-link text-white">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  Documentation
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://github.com/FoalTS/" class="nav-link text-white">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                  Github
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://twitter.com/FoalTs" class="nav-link text-white">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      <div class="container content">
         <div class="row">
           <div class="col-lg-8 d-flex flex-column justify-content-center">
-            <h1>FoalTS</h1>
-            <h3>Start fast, code less, do more.</h3>
+            <h1><%= title %></h1>
+            <h3><%= subtitle %></h3>
             <p class="text-white mt-3">
-              FoalTS is a high-level <strong>Node.JS framework</strong> to quickly build web apps in TypeScript.
-              By providing a robust architecture with many packages and tools, FoalTS is designed to let you fastly bootstrap and develop ambitious backend projects.
+              <%= description %>
             </p>
+            <div class="terminal-wrapper">
+              <div id="typed-strings" style="display: none;">
+                <span>
+                  <span class="text-muted">></span> npm install -g yo generator-foal<br>
+                  <span class="text-muted">></span> yo foal my-app<br>
+                  <span class="text-muted">></span> cd my-app<br>
+                  <span class="text-muted">></span> npm run develop
+                </span>
+              </div>
+              <div class="terminal m-auto">
+                <span id="typed"></span>
+              </div>
+            </div>
             <div>
-              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3">Get started</a>
+              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3 ml-4">
+                Get started
+                <i class="fa fa-arrow-circle-right fa-fw" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
           <div class="col-lg-4 d-none d-lg-block align-self-center">
@@ -68,124 +98,39 @@
       </div>
     </header>
 
-    <section class="terminal-section">
+    <section class="feature-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="text-center mt-0">Create your first app</h3>
-            <div id="typed-strings" style="display: none;">
-              <span>
-                $ npm install -g yo generator-foal<br>$ yo foal my-app<br>$ cd my-app<br>$ npm run develop
-              </span>
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+            <!-- <h2 class="text-center mb-5">Features</h2> -->
+            <% features.forEach(function(feature, i){ %>
+            <% if (i != 0) { %><hr><% } %>
+            <div class="row">
+              <div class="col-sm-3 d-flex align-items-center justify-content-center <% if (i % 2 == 0) { %>order-last<% } %>">
+                <i class="fa fa-<%= feature.icon %> fa-5x" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-9 d-flex">
+                <div class="flex-fill p-md-4">
+                  <h4 class="alert-heading"><%= feature.name %></h4>
+                  <p class="text-justify mb-0">
+                    <%= feature.description %>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="terminal m-auto">
-              <span id="typed"></span>
-            </div>
+            <% }); %>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="feature-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="text-center mb-5">Features</h2>
-            <div class="row">
-              <div class="col-sm-12 d-flex">
-                <div class="alert alert-primary flex-fill p-md-4 mb-4">
-                  <div class="row">
-                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
-                        <h4 class="alert-heading text-center">TypeScript</h4>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-justify mb-0">
-                        FoalTS is natively written in TypeScript and is designed to be used
-                        with TypeScript. Enjoy now optional static type-checking and the latest ECMAScript
-                        features.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 d-flex">
-                <div class="alert alert-primary flex-fill p-md-4 mb-4">
-                  <div class="row">
-                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
-                        <h4 class="alert-heading text-center">Architecture</h4>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-justify mb-0">
-                        FoalTS provides a structure made up of hooks, services, modules and controllers
-                        to let you easily handle a growing app with its complexity.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 d-flex">
-                <div class="alert alert-primary flex-fill p-md-4 mb-4">
-                  <div class="row">
-                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
-                        <h4 class="alert-heading text-center">Many packages</h4>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-justify mb-0">
-                        Don't reinvent the wheel! FoalTS has an incredible number of features such as setting up a REST API,
-                        creating a CRUD service, escaping bad input, controlling access and more!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 d-flex">
-                <div class="alert alert-primary flex-fill p-md-4 mb-4">
-                  <div class="row">
-                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
-                        <h4 class="alert-heading text-center">Great tools</h4>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-justify mb-0">
-                        FoalTS provides many tools to quickly bootstrap a project and speed up development
-                        (compiler config, linting, code generation, etc).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 d-flex">
-                <div class="alert alert-primary flex-fill p-md-4 mb-4">
-                  <div class="row">
-                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
-                        <h4 class="alert-heading text-center">Asynchronicity</h4>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-justify mb-0">
-                        FoalTS philosophy complety integrates modern asynchronous programming using promises
-                        and async/await functions. Say goodbye to the hell of JS callbacks!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 d-flex">
-                <div class="alert alert-primary flex-fill p-md-4">
-                  <div class="row">
-                    <div class="col-sm-3 d-flex align-items-center justify-content-center">
-                        <h4 class="alert-heading text-center">Testability</h4>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-justify mb-0">
-                        FoalTS components are designed to easily be tested (dependency injection, async
-                        functions, separation of concern).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="community-section">
+      <div class="container text-white">
+        <h4>You want to request a new feature?</h4>
+        <p>
+          Check out this <a href="https://github.com/FoalTS/foal/issues?q=is%3Aopen+is%3Aissue+label%3A%22feature+request%22">page</a>.
+          If a feature request already exists then add a thumb up. If not create a new issue.
+        </p>
       </div>
     </section>
 
@@ -199,13 +144,15 @@
       </div>
     </footer>
 
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="assets/3p/jquery/jquery.min.js"></script>
     <script src="assets/3p/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/3p/typed.js/typed.min.js"></script>
     <script>
       var typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
-        typeSpeed: 15,
+        typeSpeed: 20,
         showCursor: false
       });
     </script>

@@ -1,7 +1,7 @@
 .btn {
-  background-color: #4c90e4;
-  border-color: #4c90e4;
-  border-radius: initial;
+  background-color: #126cda;
+  border-color: #126cda;
+  border-radius: 30px;
   padding: 0.5rem 4rem;
 }
 
@@ -10,14 +10,14 @@
   font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
   font-size: 11pt;
   background: #30353A;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
-  height: 105px;
+  height: 115px;
   max-width: 500px;
 }
 
 .masthead {
-  background: linear-gradient(to bottom right, #5696de, #d5e7fc) ;
+  background: linear-gradient(to bottom right, #116dd6, #bcd8f9);
 }
 
 .mastfoot {
@@ -51,22 +51,40 @@
   }
 }
 
-.terminal-section {
+.terminal-wrapper {
+  padding: 20px 0;
 }
 
 .feature-section {
-  background-color: rgb(226, 244, 255);
+  background-color: #fafafa;
+  // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
+  padding-top: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 50px;
 
   h3 {
     font-weight: bold;
+  }
+
+  h4 {
+    color: #4c4cf9;
+  }
+}
+
+.community-section {
+  background: linear-gradient(to right, #337ccf, rgb(140, 206, 197));
+
+  a {
+    color: darkblue;
   }
 }
 
 .mastfoot {
   color: white;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
-.masthead, .terminal-section, .feature-section {
+.masthead>.content, .community-section  {
   padding: 40px 0px;
 }
