@@ -10,15 +10,14 @@
     <link rel="stylesheet" href="assets/3p/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/3p/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112613053-1"></script>
+    <!-- Google Analytics -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-112613053-1');
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-112613053-1', 'auto');
+      ga('send', 'pageview');
     </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
   </head>
   <body>
     <header class="masthead">
@@ -43,19 +42,19 @@
             </ul>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="https://foalts.gitbook.io/docs/" class="nav-link text-white">
+                <a href="https://foalts.gitbook.io/docs/" class="nav-link text-white" id="documentation">
                   <i class="fa fa-book" aria-hidden="true"></i>
                   Documentation
                 </a>
               </li>
               <li class="nav-item">
-                <a href="https://github.com/FoalTS/" class="nav-link text-white">
+                <a href="https://github.com/FoalTS/" class="nav-link text-white" id="github">
                   <i class="fa fa-github" aria-hidden="true"></i>
                   Github
                 </a>
               </li>
               <li class="nav-item">
-                <a href="https://twitter.com/FoalTs" class="nav-link text-white">
+                <a href="https://twitter.com/FoalTs" class="nav-link text-white" id="twitter">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                   Twitter
                 </a>
@@ -85,7 +84,7 @@
               </div>
             </div>
             <div>
-              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3 ml-4">
+              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3 ml-4" id="get-started">
                 Get started
                 <i class="fa fa-arrow-circle-right fa-fw" aria-hidden="true"></i>
               </a>
@@ -155,6 +154,35 @@
         typeSpeed: 20,
         showCursor: false
       });
+    </script>
+    <script>
+      function createFunctionWithTimeout(callback, opt_timeout) {
+        var called = false;
+        function fn() {
+          if (!called) {
+            called = true;
+            callback();
+          }
+        }
+        setTimeout(fn, opt_timeout || 1000);
+        return fn;
+      }
+
+      function attachMetricToLink(id, label) {
+        var getStarted = document.getElementById(id);
+        getStarted.addEventListener('click', function(event) {
+          event.preventDefault();
+          ga('send', 'event', label, 'click', {
+            hitCallback: createFunctionWithTimeout(function() {
+              window.location = event.target.href;
+            })
+          });
+        });
+      }
+      attachMetricToLink('get-started', 'Get Started Button');
+      attachMetricToLink('github', 'Github Button');
+      attachMetricToLink('twitter', 'Twitter Button');
+      attachMetricToLink('documentation', 'Documentation Button');
     </script>
   </body>
 </html>
