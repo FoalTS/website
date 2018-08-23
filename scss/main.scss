@@ -93,6 +93,15 @@
   padding: 10px 0px;
 }
 
-.masthead>.content, .community-section  {
+.community-section {
   padding: 40px 0px;
+}
+
+.masthead>.content  {
+  @media (min-width: 576px) {
+    padding: 40px 0px;
+  }
+  @media (max-width: 576px)  {
+    padding-bottom: 20px;
+  }
 }
