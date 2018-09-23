@@ -24,16 +24,14 @@ module.exports = {
       description: 'Some patterns always come back while developing a web app. Set up a REST API, talk to the database or manage authentication shouldn\'t be a hard task. FoalTS lets you focus on the business logic, not on re-inventing the wheel.'
     },
     {
-      name: 'Plugins (soon)',
-      icon: 'plug',
-      description: 'FoalTS doesn\'t aim to be a closed framework. Some technologies in the Node.Js ecosystem are great and you should be able to use them in your apps. To do so FoalTS ecosystem provides separate packages including these technologies.',
-      // description: 'Montius nos tumore inusitato quodam et novo ut rebellis et maiestati recalcitrantes Augustae per haec quae strepit incusat iratus nimirum quod contumacem praefectum, quid rerum ordo postulat ignorare dissimulantem formidine tenus iusserim custodiri.'
+      name: 'Architecture',
+      icon: 'home',
+      description: 'FoalTS provides a robust architecture for creating large web apps. Divided into controllers, services and hooks, your code is well organized. FoalTS enforces the separation of concerns, improves testability and makes your code more readable.',
     },
     {
       name: 'Security',
       icon: 'shield',
       description: 'Security is everyone\'s business. To help you ship secure apps FoalTS provides some common tools (csrf, xss protections) to take care of it. Moreover all default configurations are set to prevent security failures (cookies, headers, etc).',
-      // description: 'guideline Ergo ego senator inimicus, si ita vultis, homini, amicus esse, sicut semper fui, rei publicae debeo. Quid? si ipsas inimicitias, depono rei publicae causa, quis me tandem iure reprehendet, praesertim cum ego omnium meorum consiliorum atque factorum exempla semper ex summorum'
     },
   ]
 }
