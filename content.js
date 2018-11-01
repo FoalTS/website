@@ -1,7 +1,7 @@
 module.exports = {
   title: 'FoalTS',
   subtitle: 'Create enterprise-grade Node.JS applications.',
-  description: 'FoalTS is a high-level Node.JS framework to quickly build web apps in TypeScript. Thanks to its architecture, packages and tools you can now bootstrap and develop entreprise-grade apps.',
+  description: 'FoalTS is a next-generation framework that helps you create server-side Node.js applications. Its development tools, modular components and TypeScript support make it the ideal choice for building modern applications.',
   features: [
     {
       name: 'Production-ready',
