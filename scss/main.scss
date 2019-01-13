@@ -16,30 +16,36 @@
   max-width: 500px;
 }
 
-.masthead {
-  background: linear-gradient(to bottom right, #116dd6, #bcd8f9);
-}
-
 .mastfoot {
-  background-color: #4e5761;
+  background-color: #373d44;
+}
+
+.navbar {
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .masthead {
-  @media (min-width: 576px) and (max-width: 1450px) {
-    // background-image: url('../img/background.png');
-    // background-repeat: no-repeat;
-    // background-position-y: -6em;
-  }
+  // background: linear-gradient(to bottom right, #116dd6, #bcd8f9);
+  // background: linear-gradient(to bottom right, #010810, #1a1e23);
+  // background: linear-gradient(315deg,#171e26 0,#0a121d 100%)
+  background-color: #181a1b;
+  background-image: url('/assets/img/background3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+
+  min-height: 700px;
 
   h1 {
-    // color: #ffce90;
     color: white;
-    font-weight: bold;
-    font-size: 60px;
+    margin-top: 40px;
+    font-size: 100px;
   }
 
   h3 {
-    color: rgb(214, 238, 243);
+    font-weight: 300;
+    color: #fff;
   }
 
   p {
@@ -55,38 +61,67 @@
   padding: 20px 0;
 }
 
-.feature-section {
-  background-color: #fafafa;
-  // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
+.strengths-section {
   padding-top: 30px;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
+  background-color: #fafafa;
 
   h3 {
-    font-weight: bold;
+    text-align: center;
+    color: #685b5b;
   }
 
-  h4 {
-    color: #4c4cf9;
+  p {
+    line-height: 1.7;
   }
+
 }
 
-.community-section {
-  background: linear-gradient(to right, #337ccf, rgb(140, 206, 197));
+.comment-section {
+  background: #3d464f;
+  box-shadow: inset 0 30px 30px -30px rgba(0, 0, 0, 0.35), inset 0 -20px 30px -30px rgba(0, 0, 0, 0.35);
+  padding: 40px 0px;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+}
 
-  a {
-    color: darkblue;
+.feature-section {
+  background-color: #fafafa;
+  // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
+  padding-top: 35px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  .container>.row {
+    padding-bottom: 1.1rem;
+  }
+
+  img {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 32px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    max-width: 100%;
+  }
+
+  h5 {
+    color: grey;
+  }
+
+  hr {
+    margin-bottom: 0rem;
+  }
+
+  p {
+    margin-top: 1rem;
   }
 }
 
 .mastfoot {
   color: white;
   padding: 10px 0px;
-}
-
-.community-section {
-  padding: 40px 0px;
 }
 
 .masthead>.content  {

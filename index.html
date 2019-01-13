@@ -24,39 +24,27 @@
       <nav class="navbar navbar-expand-sm navbar-dark">
           <a href="#" class="navbar-brand">
             <img src="assets/img/logo_400.png" alt=""
-             width="30" height="30" class="d-inline-block align-top">
-            <span class="ml-1">FoalTS</span>
+             width="60" height="60" class="d-inline-block align-top">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
     
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item mr-2 d-flex align-items-center">
-                <a href="https://twitter.com/FoalTs?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @FoalTs</a>
-              </li>
-              <li class="nav-item d-flex align-items-center">
-                <a class="github-button" href="https://github.com/FoalTS/foal" data-icon="octicon-star" aria-label="Star FoalTS/foal on GitHub">Star</a>
-              </li>
-            </ul>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                 <a href="https://foalts.gitbook.io/docs/" class="nav-link text-white" id="documentation">
-                  <i class="fa fa-book" aria-hidden="true"></i>
                   Documentation
                 </a>
               </li>
               <li class="nav-item">
                 <a href="https://github.com/FoalTS/" class="nav-link text-white" id="github">
                   <i class="fa fa-github" aria-hidden="true"></i>
-                  Github
                 </a>
               </li>
               <li class="nav-item">
                 <a href="https://twitter.com/FoalTs" class="nav-link text-white" id="twitter">
                   <i class="fa fa-twitter" aria-hidden="true"></i>
-                  Twitter
                 </a>
               </li>
             </ul>
@@ -64,12 +52,9 @@
         </nav>
       <div class="container content">
         <div class="row">
-          <div class="col-lg-8 d-flex flex-column justify-content-center px-4">
-            <h1><%= title %></h1>
-            <h3><%= subtitle %></h3>
-            <p class="text-white mt-3 text-justify">
-              <%= description %>
-            </p>
+          <div class="col-lg-12 d-flex flex-column justify-content-center px-4">
+            <h1 class="text-center"><%= title %></h1>
+            <h3 class="text-center"><%= subtitle %></h3>
             <div class="terminal-wrapper">
               <div id="typed-strings" style="display: none;">
                 <span>
@@ -83,53 +68,91 @@
                 <span id="typed"></span>
               </div>
             </div>
-            <div>
-              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3 ml-4" id="get-started">
+            <div class="text-center">
+              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3" id="get-started">
                 Get started
                 <i class="fa fa-arrow-circle-right fa-fw" aria-hidden="true"></i>
               </a>
             </div>
           </div>
-          <div class="col-lg-4 d-none d-lg-block align-self-center">
-            <img src="assets/img/logo_400.png" alt="" class="d-block mx-auto mb-3">
-          </div>
         </div>
       </div>
     </header>
+    
+    <section class="feature-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex">
+            <div class="flex-fill p-md-4">
+              <h4>TypeScript</h4>
+              <h5>Increase your productivity with JavaScript that scales.</h5>
+              <p class="text-justify mb-0">
+                TypeScript brings you optional static type-checking along with the latest ECMAScript
+                features. Writing FoalTS with TypeScript has been and will always be fundamental. Code
+                is more elegant and concise. Most of the silly mistakes are caught at compilation. And
+                autocompletion is well-handled and the API is better documented.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/typescript2.png" class="mt-2 mt-md-0">
+          </div>
+        </div>
+        <hr>
+      </div>
+    </section>
+    <section class="feature-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex order-md-last">
+            <div class="flex-fill p-md-4">
+              <h4>Essential Components</h4>
+              <h5>Use the latest technologies and components out-of-the-box.</h5>
+              <p class="text-justify mb-0">
+                Some patterns always come back while developing a web app. Set up a REST API, talk to the database or manage authentication shouldn't be a hard task. FoalTS lets you focus on the business logic, not on re-inventing the wheel.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img src="assets/img/components2.png" class="mt-2 mt-md-0">
+          </div>
+        </div>
+        <hr>
+      </div>
+    </section>
 
     <section class="feature-section">
       <div class="container">
-        <div class="row justify-content-lg-center">
-          <div class="col-lg-9">
-            <!-- <h2 class="text-center mb-5">Features</h2> -->
-            <% features.forEach(function(feature, i){ %>
-            <% if (i != 0) { %><hr><% } %>
-            <div class="row">
-              <div class="col-sm-3 d-flex align-items-center justify-content-center <% if (i % 2 == 0) { %>order-last<% } %>">
-                <i class="fa fa-<%= feature.icon %> fa-5x" aria-hidden="true"></i>
-              </div>
-              <div class="col-sm-9 d-flex">
-                <div class="flex-fill p-md-4">
-                  <h4 class="alert-heading"><%= feature.name %></h4>
-                  <p class="text-justify mb-0">
-                    <%= feature.description %>
-                  </p>
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-md-6 d-flex">
+            <div class="flex-fill p-md-4">
+              <h4>Development Tools</h4>
+              <h5>Focus on coding, not on setting up an environment.</h5>
+              <p class="text-justify mb-0">
+                VSCode integration / Debug Tools
+                Every project needs dev tools. But setting up and maintaining such an environment in Node.Js is often hard or time consuming. FoalTS focuses on helping the developer to code. Generators, watchers, the compiler, linter, bundler and test framework are all provided in FoalTS. No more set up, get started right away.
+              </p>
             </div>
-            <% }); %>
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center order-last">
+            <img src="assets/img/dev-tools2.png" class="mt-2 mt-md-0">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="community-section">
-      <div class="container text-white">
-        <h4>You want to request a new feature?</h4>
-        <p>
-          Check out this <a href="https://github.com/FoalTS/foal/issues?q=is%3Aopen+is%3Aissue+label%3A%22feature+request%22">page</a>.
-          If a feature request already exists then add a thumb up. If not create a new issue.
-        </p>
+    <section class="comment-section">
+        FoalTS enhances the developer experience by providing the tools and components essential to creating a Web application.
+    </section>
+
+    <section class="strengths-section">
+      <div class="container">
+        <div class="text-center">
+          <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3" id="get-started">
+            Get started
+            <i class="fa fa-arrow-circle-right fa-fw" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -151,7 +174,7 @@
     <script>
       var typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
-        typeSpeed: 20,
+        typeSpeed: 18,
         showCursor: false
       });
     </script>
