@@ -38,7 +38,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="https://github.com/FoalTS/" class="nav-link text-white" id="github">
+                <a href="https://github.com/FoalTS/foal" class="nav-link text-white" id="github">
                   <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
               </li>
@@ -165,8 +165,6 @@
       </div>
     </footer>
 
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="assets/3p/jquery/jquery.min.js"></script>
     <script src="assets/3p/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/3p/typed.js/typed.min.js"></script>
@@ -196,7 +194,7 @@
           event.preventDefault();
           ga('send', 'event', label, 'click', {
             hitCallback: createFunctionWithTimeout(function() {
-              window.location = event.target.href;
+              window.location = event.target.href || event.target.parentElement.href;
             })
           });
         });
