@@ -9,7 +9,7 @@
   color: white;
   font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
   font-size: 11pt;
-  background: #30353A;
+  background: #1b1e21;
   padding: 15px;
   border-radius: 5px;
   height: 115px;
@@ -29,7 +29,7 @@
   // background: linear-gradient(to bottom right, #116dd6, #bcd8f9);
   // background: linear-gradient(to bottom right, #010810, #1a1e23);
   // background: linear-gradient(315deg,#171e26 0,#0a121d 100%)
-  background-color: #181a1b;
+  background-color: black;
   background-image: url('/assets/img/background5-min.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -91,7 +91,22 @@
   color: white;
 }
 
+// .philosophy-section {
+
+//   background-color: #fafafa;
+//   // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
+//   padding-top: 35px;
+
+//   font-size: xx-large;
+//   text-align: center;
+// }
+
 .feature-section {
+
+  h4 {
+    font-weight: bold;
+  }
+
   background-color: #fafafa;
   // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
   padding-top: 35px;
