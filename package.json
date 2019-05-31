@@ -18,14 +18,14 @@
   "homepage": "https://github.com/FoalTS/website#readme",
   "devDependencies": {
     "browser-sync": "^2.26.5",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-ejs": "^3.3.0",
     "gulp-sass": "^3.2.1"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.0",
+    "jquery": "^3.4.1",
     "typed.js": "^2.0.10"
   }
 }
