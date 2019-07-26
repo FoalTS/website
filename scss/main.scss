@@ -1,8 +1,23 @@
+$lightwhite: hsl(213, 100%, 92%);
+
 .btn {
   background-color: #126cda;
-  border-color: #126cda;
+  border: #126cda;
+  font-size: 1.1rem;
+  font-weight: 500;
   border-radius: 30px;
   padding: 0.5rem 4rem;
+}
+
+.btn-white {
+  background-color: #fff;
+  border: none;
+  color: #116bd9;
+}
+
+.btn-white:hover {
+  background-color: $lightwhite;
+  color: #116bd9;
 }
 
 .terminal {
@@ -17,12 +32,16 @@
 }
 
 .mastfoot {
-  background-color: #373d44;
+  background-color: hsla(212, 51%, 54%, 1);
 }
 
 .navbar {
   font-size: 18px;
   text-transform: uppercase;
+
+  a:hover {
+    color: $lightwhite!important;
+  }
 }
 
 .masthead {
@@ -30,7 +49,7 @@
   // background: linear-gradient(to bottom right, #010810, #1a1e23);
   // background: linear-gradient(315deg,#171e26 0,#0a121d 100%)
   background-color: black;
-  background-image: url('/assets/img/background5-min.png');
+  background-image: url('/assets/img/background8.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
@@ -49,6 +68,7 @@
   h3 {
     font-weight: 300;
     color: #fff;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
   }
 
   p {
@@ -57,6 +77,19 @@
 
   img {
     max-width: 300px;
+  }
+}
+
+.screenshot-section {
+  text-align: center;
+  margin-top: -70px;
+  margin-bottom: 50px;
+
+  img {
+    max-width: 70%;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
   }
 }
 
@@ -83,11 +116,11 @@
 }
 
 .comment-section {
-  background: #3d464f;
+  background: #126cda;
   box-shadow: inset 0 30px 30px -30px rgba(0, 0, 0, 0.35), inset 0 -20px 30px -30px rgba(0, 0, 0, 0.35);
   padding: 40px 0px;
-  font-style: italic;
-  font-size: 1.2rem;
+  // font-style: italic;
+  // font-size: 1.2rem;
   text-align: center;
   color: white;
 }
@@ -104,11 +137,14 @@
 
 .feature-section {
 
+  margin-bottom: 3rem;
+
   h4 {
     font-weight: bold;
+    font-size: 1.8rem;
   }
 
-  background-color: #fafafa;
+  // background-color: #fafafa;
   // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
   padding-top: 35px;
   padding-left: 0px;
@@ -119,13 +155,15 @@
   }
 
   img {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 32px rgba(0, 0, 0, 0.12);
+    // box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 32px rgba(0, 0, 0, 0.12);
     border-radius: 6px;
     max-width: 100%;
+    // height: 250px;
   }
 
   h5 {
-    color: grey;
+    color: hsl(209, 62%, 49%);
+    font-size: 1.5rem;
   }
 
   hr {

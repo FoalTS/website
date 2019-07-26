@@ -47,6 +47,11 @@
                   <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="https://www.youtube.com/channel/UCQFojM334E0YdoDq56MjfOQ" class="nav-link text-white" id="youtube">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -69,7 +74,7 @@
               </div>
             </div>
             <div class="text-center">
-              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3" id="get-started">
+              <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3 btn-white" id="get-started">
                 Get started
                 <i class="fa fa-arrow-circle-right fa-fw" aria-hidden="true"></i>
               </a>
@@ -78,6 +83,10 @@
         </div>
       </div>
     </header>
+
+    <section class="screenshot-section">
+      <img src="assets/img/screenshot.png" alt="">
+    </section>
 
     <!-- <section class="philosophy-section">
       <div class="container">
@@ -100,14 +109,18 @@
         </div>
       </div>
     </section> -->
+
+    <section class="text-center" style="margin-bottom:50px; font-style: italic; color: lightgray; margin-left: 160px; margin-right: 160px;">
+      Although there are alot of frameworks out there already, its definitely filling a gap and makes things as simple like no other framework does out there.
+    </section>
     
     <section class="feature-section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 d-flex">
             <div class="flex-fill p-md-4">
-              <h4><i class="fa fa-code"></i> TypeScript</h4>
-              <h5>Increase your productivity with JavaScript that scales.</h5>
+              <h4>TypeScript</h4>
+              <h5>JavaScript that scales.</h5>
               <p class="text-justify mb-0">
                 TypeScript brings you optional static type-checking along with the latest ECMAScript
                 features. Writing FoalTS with TypeScript has been and will always be fundamental. Code
@@ -120,7 +133,6 @@
             <img src="assets/img/typescript2.png" class="mt-3 mt-md-0">
           </div>
         </div>
-        <hr>
       </div>
     </section>
     <section class="feature-section">
@@ -128,18 +140,17 @@
         <div class="row">
           <div class="col-md-6 d-flex order-md-last">
             <div class="flex-fill p-md-4">
-              <h4><i class="fa fa-cubes"></i> Essential Components</h4>
-              <h5>Access a large number of built-in components.</h5>
+              <h4>Simple and Intuitive</h4>
+              <h5>No magic. No overengineering.</h5>
               <p class="text-justify mb-0">
                 Some patterns always come back while developing a web app. Set up a REST API, talk to the database or manage authentication shouldn't be a hard task. FoalTS lets you focus on the business logic, not on re-inventing the wheel.
               </p>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/components2.png" class="mt-3 mt-md-0">
+            <img src="assets/img/simple-and-intuitive2.png" class="mt-3 mt-md-0">
           </div>
         </div>
-        <hr>
       </div>
     </section>
 
@@ -148,8 +159,8 @@
         <div class="row">
           <div class="col-md-6 d-flex">
             <div class="flex-fill p-md-4">
-              <h4><i class="fa fa-wrench"></i> Development Tools</h4>
-              <h5>Focus on coding, not on setting up an environment.</h5>
+              <h4>Batteries Included</h4>
+              <h5>Auth, ORM, CLI, Scripts, OpenAPI, GraphQL, ...</h5>
               <p class="text-justify mb-0">
                 Every project needs dev tools. But setting up and maintaining such an environment in Node.Js is often hard or time consuming. FoalTS focuses on helping the developer to code. Generators, watchers, the compiler, linter and test framework are all provided in FoalTS. No more set up, get started right away.
               </p>
@@ -163,15 +174,39 @@
     </section>
 
     <section class="comment-section">
-        FoalTS enhances the developer experience by providing the tools and components essential to creating a Web application.
+      <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary btn-white" id="get-started2">
+        Get started
+        <i class="fa fa-arrow-circle-right fa-fw" aria-hidden="true"></i>
+      </a>
     </section>
 
     <section class="strengths-section">
       <div class="container">
         <div class="text-center">
-          <a href="https://foalts.gitbook.io/docs/" class="btn btn-primary mt-3" id="get-started2">
-            Get started
-            <i class="fa fa-arrow-circle-right fa-fw" aria-hidden="true"></i>
+          <a href="https://github.com/FoalTS/foal/blob/master/LICENSE">
+            <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+          </a>
+          <img src="https://img.shields.io/badge/node-%3E%3D8-brightgreen.svg" alt="node version">
+          <a href="https://badge.fury.io/js/%40foal%2Fcore">
+            <img src="https://badge.fury.io/js/%40foal%2Fcore.svg" alt="npm version">
+          </a>
+          <a href="https://travis-ci.org/FoalTS/foal">
+            <img src="https://travis-ci.org/FoalTS/foal.svg?branch=add-travis" alt="Build Status">
+          </a>
+          <a href="https://codecov.io/github/FoalTS/foal">
+            <img src="https://codecov.io/gh/FoalTS/foal/branch/master/graphs/badge.svg" alt="Code coverage">
+          </a>
+          <a href="https://snyk.io/test/npm/@foal/core">
+            <img src="https://snyk.io/test/npm/@foal/core/badge.svg" alt="Known Vulnerabilities">
+          </a>
+          <a href="https://github.com/FoalTS/foal/commits/master">
+            <img src="https://img.shields.io/github/commit-activity/y/FoalTS/foal.svg" alt="Commit activity">
+          </a>
+          <a href="https://github.com/FoalTS/foal/commits/master">
+            <img src="https://img.shields.io/github/last-commit/FoalTS/foal.svg" alt="Last commit">
+          </a>
+          <a href="https://img.shields.io/badge/2FA-npm,%20GitHub-green.svg">
+            <img src="https://img.shields.io/badge/2FA-npm,%20GitHub-green.svg" alt="2FA">
           </a>
         </div>
       </div>
