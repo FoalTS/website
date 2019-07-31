@@ -59,6 +59,10 @@ body {
   background-attachment: fixed;
   background-position: center; 
 
+  @media (max-width: 576px)  {
+    margin-bottom: 3rem;
+  }
+
   .terminal-wrapper {
     padding: 20px 0;
   }
