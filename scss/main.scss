@@ -1,8 +1,30 @@
+$lightwhite: hsl(213, 100%, 92%);
+$bg-white: #fafafa;
+$text-white: #fff;
+
+body {
+  background-color: $bg-white;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
 .btn {
   background-color: #126cda;
-  border-color: #126cda;
+  border: #126cda;
+  font-size: 1.1rem;
+  font-weight: 500;
   border-radius: 30px;
   padding: 0.5rem 4rem;
+}
+
+.btn-white {
+  background-color: #fff;
+  border: none;
+  color: #116bd9;
+}
+
+.btn-white:hover {
+  background-color: $lightwhite;
+  color: #116bd9;
 }
 
 .terminal {
@@ -17,25 +39,42 @@
 }
 
 .mastfoot {
-  background-color: #373d44;
+  background-color: hsla(212, 51%, 54%, 1);
 }
 
 .navbar {
   font-size: 18px;
   text-transform: uppercase;
+
+  a:hover {
+    color: $lightwhite!important;
+  }
 }
 
 .masthead {
-  // background: linear-gradient(to bottom right, #116dd6, #bcd8f9);
-  // background: linear-gradient(to bottom right, #010810, #1a1e23);
-  // background: linear-gradient(315deg,#171e26 0,#0a121d 100%)
-  background-color: black;
-  background-image: url('/assets/img/background5-min.png');
-  background-repeat: no-repeat;
+  min-height: 700px;
+
+  background-color: #1b7cf2;
+  background-image: url('/assets/img/background8.png');
   background-attachment: fixed;
   background-position: center; 
 
-  min-height: 700px;
+  @media (max-width: 576px)  {
+    margin-bottom: 3rem;
+  }
+
+  .terminal-wrapper {
+    padding: 20px 0;
+  }
+
+  .content  {
+    @media (min-width: 576px) {
+      padding: 40px 0px;
+    }
+    @media (max-width: 576px)  {
+      padding-bottom: 20px;
+    }
+  }
 
   h1 {
     color: white;
@@ -58,59 +97,67 @@
   img {
     max-width: 300px;
   }
-}
 
-.terminal-wrapper {
-  padding: 20px 0;
-}
-
-.strengths-section {
-  padding-top: 30px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 35px;
-  background-color: #fafafa;
-
-  h3 {
-    text-align: center;
-    color: #685b5b;
+  .btn {
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.3);
   }
-
-  p {
-    line-height: 1.7;
-  }
-
 }
 
-.comment-section {
-  background: #3d464f;
-  box-shadow: inset 0 30px 30px -30px rgba(0, 0, 0, 0.35), inset 0 -20px 30px -30px rgba(0, 0, 0, 0.35);
-  padding: 40px 0px;
-  font-style: italic;
-  font-size: 1.2rem;
+.screenshot-container {
   text-align: center;
-  color: white;
+  margin-bottom: 130px;
+  background: linear-gradient(rgb(171, 203, 243), 5%, $bg-white);
+
+  @media (max-width: 576px)  {
+    display: none;
+  }
+
+  img {
+    margin-top: -70px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
 }
 
-// .philosophy-section {
+.testimony-container {
+  margin-bottom: 50px;
+  font-size: 1.4rem;
 
-//   background-color: #fafafa;
-//   // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
-//   padding-top: 35px;
+  color: hsl(209, 62%, 49%);
 
-//   font-size: xx-large;
-//   text-align: center;
-// }
+  @media (min-width: 576px)  {
+    background-color: hsla(213, 40%, 95%, 1);
+  }
+
+  text-align: center;
+  font-style: italic;
+
+  hr {
+    max-width: 260px;
+
+    @media (max-width: 576px)  {
+      display: none;
+    }
+  }
+
+  .text {
+    padding: 30px 0;
+  }
+}
 
 .feature-section {
 
+  margin-bottom: 3rem;
+
   h4 {
     font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
   }
 
-  background-color: #fafafa;
-  // background: linear-gradient(to bottom right, #d5e7fc, rgb(253, 253, 253));
-  padding-top: 35px;
   padding-left: 0px;
   padding-right: 0px;
 
@@ -119,17 +166,17 @@
   }
 
   img {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 32px rgba(0, 0, 0, 0.12);
     border-radius: 6px;
-    max-width: 100%;
+    max-width: 90%;
+
+    @media (max-width: 992px)  {
+      max-width: 100%;
+    }
   }
 
   h5 {
-    color: grey;
-  }
-
-  hr {
-    margin-bottom: 0rem;
+    color: hsl(209, 62%, 49%);
+    font-size: 1.4rem;
   }
 
   p {
@@ -137,16 +184,30 @@
   }
 }
 
-.mastfoot {
-  color: white;
-  padding: 10px 0px;
+.get-started-container {
+  padding: 40px 0px;
+
+  background: #126cda;
+  box-shadow: inset 0 30px 30px -30px rgba(0, 0, 0, 0.35), inset 0 -20px 30px -30px rgba(0, 0, 0, 0.35);
+  
+  text-align: center;
 }
 
-.masthead>.content  {
-  @media (min-width: 576px) {
-    padding: 40px 0px;
-  }
-  @media (max-width: 576px)  {
-    padding-bottom: 20px;
-  }
+.badges-container {
+  padding-top: 30px;
+  padding-right: 0px;
+  padding-bottom: 35px;
+  padding-left: 0px;
+
+  background-color: $bg-white;
+
+  text-align: center;
+}
+
+.mastfoot {
+  padding: 10px 0px;
+
+  color: $text-white;
+
+  text-align: center;
 }
