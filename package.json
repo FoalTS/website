@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/FoalTS/website#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-ejs": "^3.3.0",
     "gulp-sass": "^3.2.1"
