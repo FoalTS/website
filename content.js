@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Foal TS',
-  subtitle: 'Node.JS framework for serious developers.',
-  description: 'FoalTS is a next-generation framework that helps you create server-side Node.js applications. Its development tools, modular components and TypeScript support make it the ideal choice for building modern applications.',
+  subtitle: 'A Node.js and TypeScript framework, all-inclusive.',
+  description: 'FoalTS is a complete Node.js and TypeScript framework with everything you need to create server-side applications. Its architecture keeps things simple and intuitive.',
   features: [
     {
       name: 'Production-ready',
